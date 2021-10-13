@@ -1,0 +1,16 @@
+<div class="card" style="width: 24rem;">
+  <div class="card-body">
+    <u><h5 class="card-title">Author info</h5></u>
+    <p>
+      <strong>Name:</strong>
+      <%= @author.first_name %> <%= @author.last_name %>
+    </p>
+
+    <p>
+      <strong>Email address:</strong>
+      <%= @author.email_address %>
+    </p>
+    <%= link_to 'Edit', edit_author_path(@author), class: 'btn btn-outline-dark' %> |
+    <%= link_to 'Back', authors_path, class: 'btn btn-outline-dark' %>
+  </div>
+</div>

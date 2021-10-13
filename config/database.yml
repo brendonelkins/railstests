@@ -1,0 +1,27 @@
+default: &default
+   adapter: postgresql
+   encoding: unicode
+  
+development:
+   adapter: postgresql
+   encoding: unicode
+   database: zkxinkyo
+   host: ella.db.elephantsql.com
+   username: zkxinkyo
+   password: cae3pFhZjZmSsFC87rVZxkWoCpwsNiTJ
+
+test:
+   adapter: postgresql
+   encoding: unicode
+   database: zkxinkyo
+   host: ella.db.elephantsql.com
+   username: zkxinkyo
+   password: cae3pFhZjZmSsFC87rVZxkWoCpwsNiTJ
+ 
+production:
+   adapter: postgresql
+   encoding: unicode
+   database: <%= Rails.application.credentials.production[:database] %>
+   host: <%= Rails.application.credentials.production[:host] %>
+   username: <%= Rails.application.credentials.production[:username] %>
+   password: <%= Rails.application.credentials.production[:password] %>

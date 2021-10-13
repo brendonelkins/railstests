@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+recipe1:
+  recipe_name: "Cake"
+  difficulty: "Easy"
+  comment: 'Tastes great'
+  author_id: 1
+
+two:
+  recipe_name: MyString
+  difficulty: MyString
+  comment: MyString
+  author_id: 1

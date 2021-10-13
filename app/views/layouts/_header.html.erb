@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <%= link_to 'ReciPlease', root_path, class: 'navbar-brand'%>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+      <div class="btn-group dropstart">
+        <button type="button" class="btn btn-outline-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          Menu
+        </button>
+        <ul class="dropdown-menu">
+          <% if current_user %>
+            <li><u><%= link_to current_user.email, root_path, class: 'dropdown-item' %></u></li>
+            <li><%= link_to 'Sign out', logout_path, method: :delete, class: 'dropdown-item' %></li>
+          <% else %>
+            <li><%= link_to 'Sign in', login_path, class: 'dropdown-item' %></li>
+            <li><%= link_to 'Create user profile', signup_path, class: 'dropdown-item' %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>

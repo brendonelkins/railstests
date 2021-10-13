@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Recipe name:</strong>
+  <%= @recipe.recipe_name %>
+</p>
+
+<p>
+  <strong>Difficulty:</strong>
+  <%= @recipe.difficulty %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @recipe.comment %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @recipe.author_id %>
+</p>
+
+<%= link_to 'Edit', edit_recipe_path(@recipe), class: 'btn btn-outline-dark' %> |
+<%= link_to 'Back', recipes_path, class: 'btn btn-outline-dark' %>
